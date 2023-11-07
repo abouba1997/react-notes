@@ -1,3 +1,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer base {
+  :root {
+    --color-primary: 0 109 119;
+    --color-secondary: 255 221 210;
+    --color-accent-1: 131 197 190;
+    --color-accent-2: 237 246 249;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-primary: 255 221 210;
+      --color-secondary: 0 109 119;
+      --color-accent-1: 237 246 249;
+      --color-accent-2: 131 197 190;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --color-primary: 255 221 210;
+    --color-secondary: 0 109 119;
+    --color-accent-1: 237 246 249;
+    --color-accent-2: 131 197 190;
+  }
+}
+
+@layer components {
+  .navbar-icon {
+    @apply text-secondary mx-3 cursor-pointer;
+  }
+
+  .sidebar-icon {
+    @apply relative flex items-center justify-center h-12 w-12 mt-2 mb-2 mx-auto shadow-lg bg-primary text-secondary
+           hover:bg-secondary hover:text-primary rounded-3xl hover:rounded-xl transition-all duration-300 ease-linear;
+  }
+
+  .sidebar-tooltip {
+    @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md shadow-md text-white bg-black text-xs font-bold
+           transition-all duration-100 scale-0 origin-left;
+  }
+}
