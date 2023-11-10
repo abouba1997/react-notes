@@ -39,7 +39,7 @@
   }
 
   .sidebar-tooltip {
-    @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md shadow-md text-white bg-black text-xs font-bold
-           transition-all duration-100 scale-0 origin-left;
+    @apply absolute w-auto p-2 m-2 min-w-max sm:left-14 sm:bottom-0 sm:translate-x-0 rounded-md shadow-md text-white bg-black text-xs font-bold
+           transition-all duration-100 scale-0 origin-left -bottom-12 left-[50%] translate-x-[-50%];
   }
 }

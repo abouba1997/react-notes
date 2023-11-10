@@ -4,13 +4,21 @@ import { MdOutlineNoteAlt } from "react-icons/md";
 import { Link } from "react-router-dom";
 import useTheme from "../../hooks/useTheme";
 import { useState } from "react";
+import OutsideClickHandler from "../../utils/OutsideClickHandler";
+import LoginRegisterPopper from "../LoginRegisterPopper";
 
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
   const [issearchBarOpen, setIssearchBarOpen] = useState<boolean>(false);
+  const [isAccountSwitcherOpen, setIsAccountSwitcherOpen] =
+    useState<boolean>(false);
 
   const openSearchTab = () => {
     setIssearchBarOpen((state) => !state);
+  };
+
+  const handleAccountSwitcher = () => {
+    setIsAccountSwitcherOpen((prev) => !prev);
   };
 
   return (
@@ -41,6 +49,7 @@ const Navbar = () => {
             size={20}
             className="navbar-icon"
             title="User account"
+            onClick={handleAccountSwitcher}
           />
           {theme === "light" ? (
             <BsMoonFill
@@ -70,6 +79,11 @@ const Navbar = () => {
             className="px-3 py-1 rounded-full focus:outline-none text-lg bg-secondary text-primary"
           />
         </div>
+      )}
+      {isAccountSwitcherOpen && (
+        <OutsideClickHandler onOutsideClick={handleAccountSwitcher}>
+          <LoginRegisterPopper handleAccountSwitcher={handleAccountSwitcher} />
+        </OutsideClickHandler>
       )}
     </div>
   );
