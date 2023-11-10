@@ -12,11 +12,13 @@ import Root from "./layout/Root";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Root />}>
-      <Route index element={<Dashboard />} />
-      <Route path="login" element={<Login />} />
-      <Route path="register" element={<Register />} />
-    </Route>
+    <>
+      <Route path="/" element={<Root />}>
+        <Route index element={<Dashboard />} />
+        <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
+      </Route>
+    </>
   )
 );
 
