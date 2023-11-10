@@ -4,7 +4,7 @@ import SidebarIcon from "../SidebarIcon";
 
 const Sidebar = () => {
   return (
-    <aside className="w-16 bg-primary text-white px-4">
+    <aside className="md:w-16 bg-primary text-white px-4 flex md:justify-start flex-row md:flex-col justify-around">
       <div className="h-16 flex items-center justify-center">
         <Link to="/" data-tip="Dashboard">
           <SidebarIcon icon={<FaTachometerAlt size={24} />} text="Dashboard" />
