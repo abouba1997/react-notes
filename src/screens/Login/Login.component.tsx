@@ -39,6 +39,7 @@ const Login = () => {
               type="text"
               placeholder="Enter your email or pseudo"
               autoFocus
+              value={formData.emailOrPseudo}
               onChange={handleChange}
             />
             <FormInput
@@ -47,6 +48,7 @@ const Login = () => {
               type="password"
               placeholder="Enter your password"
               minLength={6}
+              value={formData.password}
               onChange={handleChange}
             />
             <div className="text-sm text-right mt-2">

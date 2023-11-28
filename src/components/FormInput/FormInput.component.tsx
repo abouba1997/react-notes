@@ -4,6 +4,7 @@ const FormInput = ({
   label,
   name,
   type,
+  value,
   placeholder,
   minLength,
   autoFocus,
@@ -18,6 +19,7 @@ const FormInput = ({
         type={type}
         name={name}
         id={name}
+        value={value}
         placeholder={placeholder}
         className="w-full text-primary bg-secondary border mt-2 rounded-lg px-4 py-3 focus:border-secondary focus:text-secondary focus:outline-none focus:bg-primary"
         autoComplete="true"

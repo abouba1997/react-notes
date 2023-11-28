@@ -4,6 +4,7 @@ export type FormInputProps = {
   label: string;
   name: string;
   type: string;
+  value: string;
   placeholder: string;
   minLength?: number;
   autoFocus?: boolean;
