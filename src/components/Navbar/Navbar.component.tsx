@@ -1,7 +1,6 @@
 import { BsMoonFill, BsSearch, BsSun } from "react-icons/bs";
 import { FaRegCircleUser } from "react-icons/fa6";
 import { MdOutlineNoteAlt } from "react-icons/md";
-import { Link } from "react-router-dom";
 import useTheme from "../../hooks/useTheme";
 import { useState } from "react";
 import OutsideClickHandler from "../../utils/OutsideClickHandler";
@@ -24,13 +23,10 @@ const Navbar = () => {
   return (
     <div className="w-full py-4 bg-primary text-xl">
       <nav className="flex justify-between items-center w-full mx-auto px-3">
-        <Link
-          to="/"
-          className="text-secondary flex justify-center items-center"
-        >
+        <div className="text-secondary flex justify-center items-center">
           <MdOutlineNoteAlt size={30} className="mr-1" />
           Notes App
-        </Link>
+        </div>
         <div>
           <input
             type="text"

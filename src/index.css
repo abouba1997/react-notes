@@ -34,12 +34,25 @@
   }
 
   .sidebar-icon {
-    @apply relative flex items-center justify-center h-12 w-12 mt-2 mb-2 mx-auto shadow-lg bg-primary text-secondary
-           hover:bg-secondary hover:text-primary rounded-3xl hover:rounded-xl transition-all duration-300 ease-linear;
+    @apply relative flex items-center justify-center h-12 w-12 mt-2 mb-2 mx-auto shadow-lg bg-secondary text-primary
+           hover:bg-primary hover:text-secondary rounded-3xl hover:rounded-xl transition-all duration-300 ease-linear;
   }
 
   .sidebar-tooltip {
     @apply absolute w-auto p-2 m-2 min-w-max sm:left-14 sm:bottom-0 sm:translate-x-0 rounded-md shadow-md text-white bg-black text-xs font-bold
            transition-all duration-100 scale-0 origin-left -bottom-12 left-[50%] translate-x-[-50%];
+  }
+
+  [id^="task-completed"]:checked ~ .check-1 {
+    animation: check-animate 0.3s 1;
+  }
+
+  @keyframes check-animate {
+    0%, 100% {
+      @apply transform scale-100;
+    }
+    50% {
+      @apply transform scale-150 opacity-100
+    }
   }
 }

@@ -40,6 +40,7 @@ const Register = () => {
               type="text"
               placeholder="Enter your full name"
               autoFocus
+              value={formData.fullName}
               onChange={handleChange}
             />
             <FormInput
@@ -47,6 +48,7 @@ const Register = () => {
               name="email"
               type="text"
               placeholder="Enter your email address"
+              value={formData.email}
               onChange={handleChange}
             />
             <FormInput
@@ -54,6 +56,7 @@ const Register = () => {
               name="pseudo"
               type="text"
               placeholder="Enter your pseudo"
+              value={formData.pseudo}
               onChange={handleChange}
             />
             <FormInput
@@ -62,6 +65,7 @@ const Register = () => {
               type="password"
               placeholder="Enter your password"
               minLength={6}
+              value={formData.password}
               onChange={handleChange}
             />
             <button
